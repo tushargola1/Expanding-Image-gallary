@@ -1,0 +1,97 @@
+*{
+        margin: 0;
+        padding: 0;
+        
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: rgb(41, 39, 39);
+}
+
+
+.container{
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  /* width:10%; */
+  margin:  0 1vw;
+  flex: 0.5;
+border-radius: 5vw;
+position: relative;
+transition: flex 0.8s ease-in;
+cursor: pointer;
+
+}
+
+.panel h3{
+  position: absolute;
+    bottom: 2vw;
+    left: 0;
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+    opacity: 0;
+    width: 100%; /* Set width to 100% to ensure text doesn't overflow */
+    text-align: center; /* Center align the text */
+    transition: opacity 0.5s ease;
+}
+
+.panel:hover{
+  flex: 2;
+
+}
+
+
+.panel:hover h3{
+  opacity: 1;
+  
+  
+}
+
+.name{
+  position: absolute;
+  color: white;
+  bottom: 0.8vw;
+}
+
+@media screen and (max-width : 1024px){
+  .container{
+    width: 55vw;
+  }
+  .panel{
+    flex: 1;
+  }
+  .panel:hover{
+    flex: 5;
+  
+  }
+}
+
+@media screen and (max-width: 425px){
+  .container{
+    width: 100vw;
+  }
+  .panel{
+    flex: 2;
+  }
+  .panel:hover{
+    flex: 10;
+  
+  } 
+}
+
