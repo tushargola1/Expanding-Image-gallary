@@ -33,7 +33,7 @@ body{
   flex: 0.5;
 border-radius: 5vw;
 position: relative;
-transition: flex 0.8s ease-in;
+transition: flex 0.8s ease;
 cursor: pointer;
 
 }
@@ -53,7 +53,7 @@ cursor: pointer;
 
 .panel:hover{
   flex: 2;
-
+  
 }
 
 
@@ -66,7 +66,8 @@ cursor: pointer;
 .name{
   position: absolute;
   color: white;
-  bottom: 0.8vw;
+  bottom: 0;
+
 }
 
 @media screen and (max-width : 1024px){
@@ -83,15 +84,21 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 425px){
+  
   .container{
     width: 100vw;
   }
   .panel{
     flex: 2;
+    margin-top: -1vw;
   }
   .panel:hover{
     flex: 10;
   
   } 
+  
+
+
+
 }
 
